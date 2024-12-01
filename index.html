@@ -26,8 +26,8 @@
                </div>
                <div class="flex flex-1 justify-end gap-8">
                   <div class="flex items-center gap-9">
-                     <a class="text-[#141b0e] text-sm font-medium leading-normal" href="#">Home</a>
-                     <a class="text-[#141b0e] text-sm font-medium leading-normal" href="#">Clubs</a>
+                     <a class="text-[#141b0e] text-sm font-medium leading-normal" href="./index.html">Home</a>
+                     <a id="club-button" class="text-[#141b0e] text-sm font-medium leading-normal" href="#club">Clubs</a>
                      <a class="text-[#141b0e] text-sm font-medium leading-normal" href="#">Contact</a>
                   </div>
                   <div class="flex gap-2">
@@ -43,9 +43,9 @@
                         </div>
                      </button>
                      <button
-                        class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#edf3e7] text-[#141b0e] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+                         class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#edf3e7] text-[#141b0e] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
                         >
-                        <div class="text-[#141b0e]" data-icon="User" data-size="20px" data-weight="regular">
+                        <div id = "profile-button" class="text-[#141b0e]" data-icon="User" data-size="20px" data-weight="regular">
                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                               <path
                                  d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
@@ -56,13 +56,34 @@
                   </div>
                </div>
             </header>
+            
+            <!-- Hidden Login Form -->
+            <div id="login-form" class="hidden fixed top-20 right-10 w-72 bg-white border border-gray-300 shadow-lg rounded-lg p-6">
+               <h3 class="text-lg font-bold mb-4 text-gray-800">Login</h3>
+               <form>
+                  <div class="mb-4">
+                     <label for="username" class="block text-sm font-medium text-gray-700">Admission No:</label>
+                     <input type="text" id="username" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+            
+                  <div class="mb-4">
+                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                     <input type="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+            
+                  <button type="submit" class="w-full bg-[#80e619] text-[#141b0e] text-sm font-bold py-2 rounded-lg hover:bg-blue-600">
+                     Login
+                  </button>
+               </form>
+            </div>
+            
             <div class="px-40 flex flex-1 justify-center py-5">
                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                   <div class="@container">
                      <div class="@[480px]:p-4">
                         <div
                            class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                           style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://www.mepconnect.org/uploads/slides/Untitled%20design%20(4).png");'
+                           id = "welcome-bg" style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://www.mepconnect.org/uploads/slides/Untitled%20design%20(4).png");'
                            >
                            <div class="flex flex-col gap-2 text-center">
                               <h1
@@ -82,76 +103,97 @@
                      Welcome to the MEPCO Clubs, a vibrant community of passionate students dedicated to their passion. 
                      Our clubs aims to create a space where students can come together, share ideas, learn, and grow in an environment of mutual respect and collaboration.
                   </p>
-                  <h3 class="text-[#141b0e] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Our Clubs</h3>
-                  <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                  <h3 id = "club" class="text-[#141b0e] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Our Clubs</h3>
+                  <div id = "clubs" class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/maths.html">
                         <div
+                           
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/maths.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Maths Club</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/rifle.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/rifle.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Rifle Club</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/photoclub.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/photoclub.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Photography Club</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/reader.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/reader.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Readers Club</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/bsf.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/bsf.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Blue Sky Forum</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/nss.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/nss.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">NSS</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/ncc.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/ncc.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">NCC</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/health.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/health.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Health Club</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/nature.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/nature.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Nature Forum</p>
                      </div>
                      <div class="flex flex-col gap-3 pb-3">
+                        <a href="./clubs/finearts.html">
                         <div
                            class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                            style='background-image: url("./images/finearts.png");'
                            ></div>
+                        </a>
                         <p class="text-[#141b0e] text-base font-medium leading-normal">Fine Arts</p>
                      </div>
                   </div>
@@ -165,8 +207,8 @@
                      Whether you're looking to expand your knowledge, build friendships, or make a difference on campus, Thi
                      s is the perfect place for you. Become a part of our growing community and get involved today!
                   </p>
-                  <h3 class="text-[#141b0e] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Contact Us</h3>
-                  <div class="flex max-w-[480px] flex-1 flex-wrap items-end gap-4 px-4 py-3">
+                  <h3 id = "contact-section" class= "text-[#141b0e] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Contact Us</h3>
+                  <div id = "contact-section" class="flex max-w-[480px] flex-1 flex-wrap items-end gap-4 px-4 py-3">
                      <label class="flex flex-col min-w-40 flex-1">
                         <p class="text-[#141b0e] text-base font-medium leading-normal pb-2">Your Name</p>
                         <input
@@ -205,5 +247,7 @@
             </div>
          </div>
       </div>
+      <script src="script.js"></script>
+      
    </body>
 </html>
